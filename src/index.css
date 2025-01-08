@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Serif", serif;
+  font-size: 22px;
+  width: 100vw;
+  height: 100vh;
+  color: #000;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='69.282' height='40' patternTransform='scale(3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(240,6.7%,17.6%,1)'/><path d='M34.641-20v80m34.64-40L0-20m69.282 80L0 20m69.282 0L0 60m69.282-80L0 20m69.282-40v80M0-20v80M34.64 40l11.547-20m11.547 20l11.547 20M34.641 40h23.094m11.547-20L57.735 40M46.188 20L34.641 40l11.547 20h23.094L80.83 40 69.282 20H46.188zM34.641 40l11.547-20m11.547 20l11.547 20M34.641 40h23.094m11.547-20L57.735 40M46.188 20L34.641 40l11.547 20h23.094L80.83 40 69.282 20H46.188zM34.641 0l11.547-20M57.735 0l11.547 20M34.642 0h23.093m11.547-20L57.735 0M46.188-20L34.641 0l11.547 20h23.094L80.83 0 69.282-20H46.188zM34.641 40L23.094 20M11.547 40L0 60m34.64-20H11.548M0 20l11.547 20m11.547-20l11.547 20-11.547 20H0l-11.547-20L0 20h23.094zM34.641 0L23.094-20M11.547 0L0 20M34.64 0H11.548M0-20L11.547 0m11.547-20L34.641 0 23.094 20H0L-11.547 0 0-20h23.094z'  stroke-width='1' stroke='hsla(47,80.9%,61%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 650px;
+  height: auto;
+  padding: 20px;
+  background-color: #ffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 31px 13px rgba(0,0,0,0.1);
+} 
+
+.title {
+  font-size: 3em;
+  margin: 30px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.break-controls,
+.session-controls {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#timer-label {
+  font-size: 2.5em;
+  margin: 30px 0 30px 0;
+}
+
+.btn{
+  width: 85px;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, .2);
+  &:hover {
+  background-color: #FFE31A;
+  color: #000;
+  transition: all 0.25s ease-out;
+  }
+}
+
+.btn-breakUp,
+.btn-sessionUp,
+.btn-play-pause {
+  background-color: #399918;
+}
+
+.btn-sessionDown,
+.btn-breakDown,
+.btn-reset {
+  background-color: #F09319;
+}
+
+#break-length,
+#session-length {
+  margin: 0 15px;
+}
+
+.timer-btns {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.timer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.timer-btn:last-child {
+  margin-right: 0;
+}
+
+#time-left {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+}
+
+@media(max-width: 800px) {
+  .app-container {
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 2em;
+    padding: 0 10px;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+  }
+  .break-controls,
+  .session-controls {
+    font-size: 0.8em;
+  }
+  
+  .timer {
+    width: 90%;
+  }
+  
+  #timer-label {
+    font-size: 2em;
+  }
+  
+  #time-left {
+    font-size: 3em;
+  }
+}
